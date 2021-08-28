@@ -1,0 +1,88 @@
+bash: cannot set terminal process group (78): Inappropriate ioctl for device
+bash: no job control in this shell
+/content/dataset# cd ..
+/content# source activate FutureGAN
+ataset' --nc 3 --tb_logging=True --save_ckpt_every 1
+ ... loading training configuration ... 
+ ... saving training configuration to <_io.TextIOWrapper name='./logs/2021-08-28_093511/train_config.txt' mode='w' encoding='UTF-8'>
+ ... creating initial models ... 
+ ... initial models have been built successfully ... 
+ ... saving initial model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_093511/initial_model_structure_4x4.txt' mode='w' encoding='UTF-8'>
+  2% 1/40 [00:24<15:59, 24.60s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+  8% 3/40 [00:45<10:37, 17.24s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 12% 5/40 [01:07<08:01, 13.77s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 18% 7/40 [01:38<07:41, 13.99s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 22% 9/40 [02:08<07:08, 13.82s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 28% 11/40 [02:38<06:39, 13.79s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 32% 13/40 [03:07<06:10, 13.70s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 38% 15/40 [03:37<05:42, 13.69s/it]Traceback (most recent call last):
+  File "/content/FutureGAN/train.py", line 832, in <module>
+    trainer.train()
+  File "/content/FutureGAN/train.py", line 557, in train
+    self.save_ckpt(self.ckpt_dir)
+  File "/content/FutureGAN/train.py", line 772, in save_ckpt
+    torch.save(self.get_state('G'), save_path)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/serialization.py", line 135, in save
+    return _with_file_like(f, "wb", lambda f: _save(obj, f, pickle_module, pickle_protocol))
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/serialization.py", line 117, in _with_file_like
+    return body(f)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/serialization.py", line 135, in <lambda>
+    return _with_file_like(f, "wb", lambda f: _save(obj, f, pickle_module, pickle_protocol))
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/serialization.py", line 204, in _save
+    serialized_storages[key]._write_file(f)
+KeyboardInterrupt
+Exception ignored in: <bound method tqdm.__del__ of  38% 15/40 [03:53<05:42, 13.69s/it]>
+Traceback (most recent call last):
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_tqdm.py", line 931, in __del__
+    self.close()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_tqdm.py", line 1133, in close
+    self._decr_instances(self)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_tqdm.py", line 496, in _decr_instances
+    cls.monitor.exit()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_monitor.py", line 52, in exit
+    self.join()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/threading.py", line 1053, in join
+    raise RuntimeError("cannot join current thread")
+RuntimeError: cannot join current thread
+ataset' --nc 3 --tb_logging=True
+ ... loading training configuration ... 
+ ... saving training configuration to <_io.TextIOWrapper name='./logs/2021-08-28_094346/train_config.txt' mode='w' encoding='UTF-8'>
+ ... creating initial models ... 
+ ... initial models have been built successfully ... 
+ ... saving initial model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/initial_model_structure_4x4.txt' mode='w' encoding='UTF-8'>
+ 22% 9/40 [01:29<04:41,  9.08s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 48% 19/40 [02:55<02:52,  8.20s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 72% 29/40 [04:23<01:32,  8.37s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 98% 39/40 [05:49<00:08,  8.07s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+100% 40/40 [06:03<00:00,  9.67s/it]
+  2% 1/40 [00:07<05:11,  7.98s/it] ... growing generator from 4x4 to 8x8 ... 
+ ... growing discriminator from 4x4 to 8x8 ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_8x8.txt' mode='a' encoding='UTF-8'>
+ 42% 17/40 [02:35<03:11,  8.35s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 92% 37/40 [05:34<00:25,  8.54s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+100% 40/40 [06:09<00:00,  9.90s/it]
+  1% 1/80 [00:08<11:12,  8.51s/it] ... flushing generator ... 
+ ... flushing discriminator ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_8x8.txt' mode='a' encoding='UTF-8'>
+ 21% 17/80 [02:21<08:43,  8.31s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 46% 37/80 [05:16<05:57,  8.30s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 51% 41/80 [05:58<06:02,  9.29s/it] ... growing generator from 8x8 to 16x16 ... 
+ ... growing discriminator from 8x8 to 16x16 ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_16x16.txt' mode='a' encoding='UTF-8'>
+ 86% 69/80 [10:42<01:46,  9.64s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+100% 80/80 [12:49<00:00,  9.99s/it]
+ 17% 24/140 [03:49<18:16,  9.45s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 22% 31/140 [05:17<18:40, 10.28s/it] ... flushing generator ... 
+ ... flushing discriminator ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_16x16.txt' mode='a' encoding='UTF-8'>
+ 42% 59/140 [09:42<12:44,  9.43s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 67% 94/140 [15:33<07:16,  9.49s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 72% 101/140 [16:59<06:38, 10.21s/it] ... growing generator from 16x16 to 32x32 ... 
+ ... growing discriminator from 16x16 to 32x32 ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_32x32.txt' mode='a' encoding='UTF-8'>
+ 87% 122/140 [22:48<04:45, 15.86s/it]
