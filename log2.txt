@@ -1,0 +1,159 @@
+bash: cannot set terminal process group (78): Inappropriate ioctl for device
+bash: no job control in this shell
+/content/dataset# cd ..
+/content# source activate FutureGAN
+ataset' --nc 3 --tb_logging=True --save_ckpt_every 1
+ ... loading training configuration ... 
+ ... saving training configuration to <_io.TextIOWrapper name='./logs/2021-08-28_093511/train_config.txt' mode='w' encoding='UTF-8'>
+ ... creating initial models ... 
+ ... initial models have been built successfully ... 
+ ... saving initial model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_093511/initial_model_structure_4x4.txt' mode='w' encoding='UTF-8'>
+  2% 1/40 [00:24<15:59, 24.60s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+  8% 3/40 [00:45<10:37, 17.24s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 12% 5/40 [01:07<08:01, 13.77s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 18% 7/40 [01:38<07:41, 13.99s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 22% 9/40 [02:08<07:08, 13.82s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 28% 11/40 [02:38<06:39, 13.79s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 32% 13/40 [03:07<06:10, 13.70s/it] ... saving model checkpoints to ./logs/2021-08-28_093511/ckpts
+ 38% 15/40 [03:37<05:42, 13.69s/it]Traceback (most recent call last):
+  File "/content/FutureGAN/train.py", line 832, in <module>
+    trainer.train()
+  File "/content/FutureGAN/train.py", line 557, in train
+    self.save_ckpt(self.ckpt_dir)
+  File "/content/FutureGAN/train.py", line 772, in save_ckpt
+    torch.save(self.get_state('G'), save_path)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/serialization.py", line 135, in save
+    return _with_file_like(f, "wb", lambda f: _save(obj, f, pickle_module, pickle_protocol))
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/serialization.py", line 117, in _with_file_like
+    return body(f)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/serialization.py", line 135, in <lambda>
+    return _with_file_like(f, "wb", lambda f: _save(obj, f, pickle_module, pickle_protocol))
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/serialization.py", line 204, in _save
+    serialized_storages[key]._write_file(f)
+KeyboardInterrupt
+Exception ignored in: <bound method tqdm.__del__ of  38% 15/40 [03:53<05:42, 13.69s/it]>
+Traceback (most recent call last):
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_tqdm.py", line 931, in __del__
+    self.close()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_tqdm.py", line 1133, in close
+    self._decr_instances(self)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_tqdm.py", line 496, in _decr_instances
+    cls.monitor.exit()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_monitor.py", line 52, in exit
+    self.join()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/threading.py", line 1053, in join
+    raise RuntimeError("cannot join current thread")
+RuntimeError: cannot join current thread
+ataset' --nc 3 --tb_logging=True
+ ... loading training configuration ... 
+ ... saving training configuration to <_io.TextIOWrapper name='./logs/2021-08-28_094346/train_config.txt' mode='w' encoding='UTF-8'>
+ ... creating initial models ... 
+ ... initial models have been built successfully ... 
+ ... saving initial model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/initial_model_structure_4x4.txt' mode='w' encoding='UTF-8'>
+ 22% 9/40 [01:29<04:41,  9.08s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 48% 19/40 [02:55<02:52,  8.20s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 72% 29/40 [04:23<01:32,  8.37s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 98% 39/40 [05:49<00:08,  8.07s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+100% 40/40 [06:03<00:00,  9.67s/it]
+  2% 1/40 [00:07<05:11,  7.98s/it] ... growing generator from 4x4 to 8x8 ... 
+ ... growing discriminator from 4x4 to 8x8 ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_8x8.txt' mode='a' encoding='UTF-8'>
+ 42% 17/40 [02:35<03:11,  8.35s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 92% 37/40 [05:34<00:25,  8.54s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+100% 40/40 [06:09<00:00,  9.90s/it]
+  1% 1/80 [00:08<11:12,  8.51s/it] ... flushing generator ... 
+ ... flushing discriminator ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_8x8.txt' mode='a' encoding='UTF-8'>
+ 21% 17/80 [02:21<08:43,  8.31s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 46% 37/80 [05:16<05:57,  8.30s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 51% 41/80 [05:58<06:02,  9.29s/it] ... growing generator from 8x8 to 16x16 ... 
+ ... growing discriminator from 8x8 to 16x16 ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_16x16.txt' mode='a' encoding='UTF-8'>
+ 86% 69/80 [10:42<01:46,  9.64s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+100% 80/80 [12:49<00:00,  9.99s/it]
+ 17% 24/140 [03:49<18:16,  9.45s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 22% 31/140 [05:17<18:40, 10.28s/it] ... flushing generator ... 
+ ... flushing discriminator ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_16x16.txt' mode='a' encoding='UTF-8'>
+ 42% 59/140 [09:42<12:44,  9.43s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 67% 94/140 [15:33<07:16,  9.49s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 72% 101/140 [16:59<06:38, 10.21s/it] ... growing generator from 16x16 to 32x32 ... 
+ ... growing discriminator from 16x16 to 32x32 ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_32x32.txt' mode='a' encoding='UTF-8'>
+100% 140/140 [27:38<00:00, 16.82s/it]
+  5% 13/260 [03:25<1:05:42, 15.96s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 30% 78/260 [21:13<48:20, 15.93s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 35% 91/260 [25:11<45:04, 16.00s/it] ... flushing generator ... 
+ ... flushing discriminator ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_32x32.txt' mode='a' encoding='UTF-8'>
+ 55% 143/260 [38:37<30:11, 15.48s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 80% 208/260 [55:56<13:27, 15.52s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
+ 85% 221/260 [59:49<10:12, 15.70s/it] ... growing generator from 32x32 to 64x64 ... 
+ ... growing discriminator from 32x32 to 64x64 ... 
+ ... models are being updated ... 
+ ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_64x64.txt' mode='a' encoding='UTF-8'>
+100% 260/260 [1:10:16<00:00, 15.56s/it]
+  1% 3/520 [00:46<2:14:09, 15.57s/it]Traceback (most recent call last):
+  File "/content/FutureGAN/train.py", line 832, in <module>
+    trainer.train()
+  File "/content/FutureGAN/train.py", line 567, in train
+    self.x.data = self.feed_interpolated_input(self.get_batch())
+  File "/content/FutureGAN/train.py", line 538, in get_batch
+    return next(dataIter)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 275, in __next__
+Process Process-2253:
+Process Process-2256:
+Process Process-2254:
+Process Process-2255:
+    idx, batch = self._get_batch()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 254, in _get_batch
+    return self.data_queue.get()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/multiprocessing/queues.py", line 335, in get
+    res = self._reader.recv_bytes()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Exception ignored in: <bound method tqdm.__del__ of   1% 3/520 [00:47<2:14:09, 15.57s/it]>
+Traceback (most recent call last):
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_tqdm.py", line 931, in __del__
+    self.close()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_tqdm.py", line 1133, in close
+    self._decr_instances(self)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_tqdm.py", line 496, in _decr_instances
+    cls.monitor.exit()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/tqdm/_monitor.py", line 52, in exit
+    self.join()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/threading.py", line 1053, in join
+    raise RuntimeError("cannot join current thread")
+RuntimeError: cannot join current thread
+Traceback (most recent call last):
+  File "/usr/local/envs/FutureGAN/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 55, in _worker_loop
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 55, in <listcomp>
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/content/FutureGAN/video_dataset.py", line 216, in __getitem__
+    video_sample = self.loader(frame_paths)
+  File "/content/FutureGAN/video_dataset.py", line 110, in video_loader
+    video.append(image_loader(frame_path))
+  File "/content/FutureGAN/video_dataset.py", line 43, in pil_loader
+    return img.convert('RGB')
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/PIL/Image.py", line 899, in convert
+    self.load()
+  File "/usr/local/envs/FutureGAN/lib/python3.6/site-packages/PIL/ImageFile.py", line 239, in load
+    n, err_code = decoder.decode(b)
+KeyboardInterrupt
+^C
