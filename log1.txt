@@ -93,4 +93,4 @@ ataset' --nc 3 --tb_logging=True
  ... models are being updated ... 
  ... saving updated model strutures to <_io.TextIOWrapper name='./logs/2021-08-28_094346/model_structure_32x32.txt' mode='a' encoding='UTF-8'>
  55% 143/260 [38:37<30:11, 15.48s/it] ... saving model checkpoints to ./logs/2021-08-28_094346/ckpts
- 59% 154/260 [41:59<27:50, 15.76s/it]
+ 77% 200/260 [53:53<16:19, 16.32s/it]
